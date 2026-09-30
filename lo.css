@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f7f7f7;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 31px;
+}
+
+.logo-area h1 {
+    color: #252525;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 3px;
+}
+
+.logo-area p {
+    color: #777;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+
+.login-card {
+    width: 775px;
+    max-width: calc(100% - 30px);
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #eeeeee;
+}
+
+/* =========================
+   ABAS
+========================= */
+
+.tabs {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    background: #3fa446;
+}
+
+.tab {
+    width: 50%;
+    height: 90px;
+
+    border: none;
+    outline: none;
+
+    background: #3fa446;
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    transition: background 0.2s;
+}
+
+.tab i {
+    font-size: 15px;
+}
+
+.tab.active {
+    background: #5db85f;
+    box-shadow:
+        inset 0 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.tab:hover {
+    background: #54b356;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.login-form {
+    padding: 52px 60px 0;
+}
+
+.input-group {
+    height: 66px;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    width: 40px;
+
+    color: #222;
+    font-size: 15px;
+    text-align: left;
+}
+
+.input-group input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 18px;
+    color: #555;
+
+    background: transparent;
+}
+
+.input-group input::placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.form-options {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    width: 19px;
+    height: 19px;
+
+    appearance: none;
+
+    border: 1px solid #aaa;
+    background: #fff;
+
+    cursor: pointer;
+}
+
+.remember input:checked {
+    background: #43a047;
+    border-color: #43a047;
+
+    position: relative;
+}
+
+.remember input:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+    font-size: 14px;
+
+    left: 3px;
+    top: 0;
+}
+
+.form-options a {
+    color: #444;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+
+.btn-enter {
+    display: block;
+
+    margin: 34px auto 0;
+
+    width: 142px;
+    height: 63px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #43a047;
+    color: white;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.1s;
+}
+
+.btn-enter:hover {
+    background: #388e3c;
+}
+
+.btn-enter:active {
+    transform: scale(0.98);
+}
+
+
+.certificate-btn {
+    width: calc(100% - 120px);
+    height: 54px;
+
+    margin: 60px 60px 0;
+
+    border: none;
+    border-radius: 3px;
+
+    background: #43a047;
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.certificate-btn:hover {
+    background: #388e3c;
+}
+
+.certificate-btn i {
+    font-size: 12px;
+}
+
+
+.register {
+    text-align: center;
+
+    padding: 48px 20px 38px;
+
+    font-size: 17px;
+    color: #777;
+}
+
+.register a {
+    color: #429b47;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .logo-area h1 {
+        font-size: 34px;
+    }
+
+    .logo-area p {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .login-card {
+        max-width: calc(100% - 20px);
+    }
+
+    .tabs,
+    .tab {
+        height: 70px;
+    }
+
+    .tab {
+        font-size: 17px;
+    }
+
+    .login-form {
+        padding: 35px 25px 0;
+    }
+
+    .certificate-btn {
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .form-options {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .btn-enter {
+        margin-top: 30px;
+    }
+
+    .certificate-btn {
+        font-size: 15px;
+    }
+}

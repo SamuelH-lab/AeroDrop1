@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #252525;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: calc(100% - 170px);
+    margin: auto;
+    padding-top: 73px;
+}
+.linha2{
+position: relative;
+top: 30px;
+}
+.linha1 {
+    position: relative;
+    top: -50px;
+}
+.menu {
+    background-color: white;
+    display: flex;
+    gap: 12px;
+}
+
+.menu a {
+    border: 2px solid #59a58e;
+    color: #29977a;
+    padding: 9px 13px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.header-bottom {
+    height: 179px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #080808;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.login-menu {
+    display: flex;
+    gap: 22px;
+}
+
+.login-menu a {
+    border: 2px solid #59a58e;
+    color: #29977a;
+    padding: 14px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home {
+    width: calc(100% - 170px);
+    margin: auto;
+
+    padding: 28px 0 39px;
+}
+
+.home hr {
+    border: none;
+    border-top: 2px solid #aaa;
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+
+    align-items: center;
+}
+
+.home-text h1 {
+    font-size: 62px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+
+    margin-bottom: 28px;
+}
+
+.home-text p {
+    max-width: 680px;
+
+    font-size: 25px;
+    line-height: 1.5;
+
+    color: #444;
+
+    margin-bottom: 31px;
+}
+
+.button {
+    display: inline-block;
+
+    background: #20a178;
+    color: white;
+
+    padding: 18px 25px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.home-image {
+    height: 392px;
+    overflow: hidden;
+}
+
+.home-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre {
+    width: 100%;
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 57% 43%;
+}
+
+.sobre-text {
+    padding: 47px 55px 48px 85px;
+}
+
+.mini-menu {
+    display: inline-block;
+    border: 1px solid #4c9d89;
+    color: #278f77;
+    padding: 4px 7px;
+    font-size: 14px;
+}
+
+.sobre h2 {
+    font-size: 43px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #444;
+
+    margin-bottom: 27px;
+}
+
+.problemas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.icone {
+    color: #31a88b;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.problema h3 {
+    color: #333;
+
+    font-size: 21px;
+
+    margin-bottom: 13px;
+}
+
+.problema p {
+    color: #484848;
+
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.descricao {
+    color: #444;
+
+    font-size: 17px;
+    line-height: 1.55;
+
+    margin-top: 31px;
+    margin-bottom: 23px;
+}
+
+.label {
+    color: #268e76;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sobre-image1 {
+    height: 800px;
+    overflow: hidden;
+}
+
+.sobre-image1 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: relative;
+    top: 50px;
+}
+
+.frota {
+    width: calc(100% - 170px);
+    margin: auto;
+
+    padding-top: 48px;
+}
+
+.titulo-section span,
+.titulo-operacao span {
+    color: #278f77;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.titulo-section h2 {
+    font-size: 55px;
+
+    margin-top: 4px;
+    margin-bottom: 78px;
+}
+
+.itroducao {
+    color: #404040;
+
+    font-size: 25px;
+
+    margin-bottom: 87px;
+}
+
+.frota-cards {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+.frota-card {
+    min-height: 309px;
+
+    border: 2px solid #d5d5d5;
+
+    display: grid;
+
+    grid-template-columns: 96px 1fr;
+}
+
+.numero {
+    background: #f3f0ef;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.frota-info {
+    padding: 24px 25px;
+}
+
+.frota-info h3 {
+    color: #333;
+
+    font-size: 31px;
+
+    margin-bottom: 32px;
+}
+
+.frota-info h4 {
+    font-size: 24px;
+
+    margin-bottom: 27px;
+}
+
+.frota-info p {
+    color: #444;
+
+    font-size: 22px;
+
+    margin-bottom: 24px;
+}
+
+.frota-info ul {
+    padding-left: 36px;
+}
+
+.frota-info li {
+    color: #444;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+
+    margin-bottom: 5px;
+}
+
+.frota hr {
+    border: none;
+    border-top: 2px solid #aaa;
+
+    margin-top: 70px;
+}
+
+.frota-bottom {
+    padding-top: 39px;
+
+    font-size: 24px;
+
+    color: #444;
+}
+
+.operacao {
+    width: calc(100% - 580px);
+
+    max-width: 1020px;
+
+    margin: auto;
+
+    padding-top: 49px;
+}
+
+.titulo-operacao h2 {
+    color: #090909;
+
+    font-size: 44px;
+
+    margin-top: 8px;
+    margin-bottom: 35px;
+}
+
+.titulo-operacao p {
+    color: #444;
+
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+.operacao-image {
+    width: 100%;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+}
+
+.operacao-image img {
+    width: 100%;
+    height: auto;
+}
+
+.etapas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 4fr);
+
+    gap: 28px;
+}
+
+.etapa {
+    min-height: 200px;
+
+    border: 5px solid #ddd;
+
+    border-left: 19px solid #26a27e;
+
+    padding: 10px;
+}
+
+.etapa span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.etapa h3 {
+    font-size: 20px;
+
+    margin-top: 5px;
+    margin-bottom: 18px;
+}
+
+.etapa p {
+    color: #444;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+}
+
+.operacao-final {
+    text-align: center;
+
+    color: #555;
+
+    font-size: 17px;
+
+    margin-top: 24px;
+
+    padding-bottom: 40px;
+}
+
+footer {
+    width: calc(100% - 580px);
+
+    max-width: 1020px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 27px 0 40px;
+
+    color: #555;
+
+    font-size: 18px;
+}
+
+footer hr {
+    border: none;
+    border-top: 2px solid #aaa;
+
+    margin-bottom: 27px;
+}
+
+@media (max-width: 1100px) {
+
+    .header,
+    .home,
+    .frota {
+        width: calc(100% - 60px);
+    }
+
+    .sobre-text {
+        padding-left: 30px;
+    }
+
+    .operacao,
+    footer {
+        width: calc(100% - 100px);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .header {
+        width: calc(100% - 30px);
+
+        padding-top: 25px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 12px;
+
+        padding: 7px;
+    }
+
+    .header-bottom {
+        height: auto;
+
+        padding: 30px 0;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .login-menu {
+        gap: 7px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .login-menu a {
+        font-size: 14px;
+
+        padding: 9px;
+    }
+
+    .home {
+        width: calc(100% - 30px);
+
+        padding: 30px 0;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .home-text h1 {
+        font-size: 42px;
+    }
+
+    .home-text p {
+        font-size: 18px;
+    }
+
+    .home-image {
+        height: 300px;
+    }
+
+    .sobre-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-text {
+        padding: 35px 30px;
+    }
+
+    .sobre-image {
+        height: 500px;
+    }
+
+    .frota {
+        width: calc(100% - 30px);
+        padding-top: 35px;
+    }
+
+    .titulo-section h2 {
+        font-size: 42px;
+        margin-bottom: 45px;
+    }
+
+    .itroducao {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .frota-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .frota-card {
+        grid-template-columns: 65px 1fr;
+    }
+
+    .operacao {
+        width: calc(100% - 40px);
+    }
+
+    .etapas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .etapas {
+        grid-template-columns: 1fr;
+    }
+
+    .frota-info {
+        padding: 20px;
+    }
+
+    .frota-info h3 {
+        font-size: 26px;
+    }
+
+    .frota-info h4 {
+        font-size: 20px;
+    }
+
+    .frota-info p,
+    .frota-info li {
+        font-size: 17px;
+    }
+}
