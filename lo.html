@@ -31,7 +31,7 @@
 
         <section class="login-card">
 
-            <!-- Abas de navegação -->
+      
             <div class="tabs">
 
                 <button
@@ -105,7 +105,7 @@
 
             </form>
 
-            <!-- Formulário de Cadastro -->
+            
             <form class="login-form" id="register-form" hidden>
 
                 <div class="input-group">
@@ -169,13 +169,13 @@
 
             </form>
 
-            <!-- Certificado digital -->
+            
             <button type="button" class="certificate-btn" id="certificate-btn">
                 <i class="fa-solid fa-certificate"></i>
                 Entrar com certificado
             </button>
 
-            <!-- Link inferior -->
+           
             <div class="register" id="register-message">
                 Ainda não criou sua conta?
                 <a href="#" id="register-link">Cadastre-se agora.</a>
@@ -261,7 +261,7 @@
             alert("A interface de login está funcionando! Para autenticar usuários, será necessário conectar um sistema de backend.");
         });
 
-        // Cadastro
+        
         registerForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -277,13 +277,13 @@
 
         });
 
-        // Recuperação de senha
+        
         document.getElementById("forgot-password").addEventListener("click", (event) => {
             event.preventDefault();
             alert("A recuperação de senha será disponibilizada quando o sistema de contas estiver conectado.");
         });
 
-        // Certificado digital
+       
         document.getElementById("certificate-btn").addEventListener("click", () => {
             alert("O acesso por certificado digital ainda precisa ser integrado.");
         });
