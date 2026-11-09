@@ -1,88 +1,117 @@
+/* ========================================
+   AERODROP - LOGIN E CADASTRO
+   CSS RESPONSIVO
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
-    background: #f7f7f7;
+    padding: 35px 15px;
+
+    background:
+        radial-gradient(circle at top left, #e6f5ed, transparent 40%),
+        #f5f8f6;
 
     font-family: Arial, Helvetica, sans-serif;
-    color: #666;
+    color: #444;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ========================================
+   CONTAINER
+======================================== */
+
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 780px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* ========================================
+   LOGO
+======================================== */
+
 .logo-area {
     text-align: center;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
 }
 
 .logo-area h1 {
-    color: #252525;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    margin-bottom: 3px;
+    color: #111;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 7px;
 }
 
 .logo-area p {
-    color: #777;
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: 400;
+    color: #29977a;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    font-weight: bold;
 }
 
+/* ========================================
+   CARD
+======================================== */
 
 .login-card {
-    width: 775px;
-    max-width: calc(100% - 30px);
+    width: 100%;
+    max-width: 775px;
 
     background: #fff;
 
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8eee9;
+    border-radius: 10px;
 
-    border: 1px solid #eeeeee;
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.07);
 }
 
-/* =========================
+/* ========================================
    ABAS
-========================= */
+======================================== */
 
 .tabs {
     width: 100%;
-    height: 90px;
+    min-height: 75px;
 
     display: flex;
 
-    background: #3fa446;
+    background: #29977a;
 }
 
 .tab {
-    width: 50%;
-    height: 90px;
+    flex: 1;
+    min-width: 0;
+
+    min-height: 75px;
 
     border: none;
     outline: none;
 
-    background: #3fa446;
-    color: #fff;
+    background: #29977a;
+    color: white;
 
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 600;
 
     cursor: pointer;
 
@@ -91,72 +120,78 @@ body {
     justify-content: center;
     gap: 12px;
 
-    transition: background 0.2s;
+    transition: 0.25s;
 }
 
 .tab i {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .tab.active {
-    background: #5db85f;
-    box-shadow:
-        inset 0 0 0 10px rgba(255, 255, 255, 0.08);
+    background: #16785f;
+    box-shadow: inset 0 -4px 0 #b5ead5;
 }
 
 .tab:hover {
-    background: #54b356;
+    background: #218669;
 }
 
-/* =========================
+/* ========================================
    FORMULÁRIO
-========================= */
+======================================== */
 
 .login-form {
-    padding: 52px 60px 0;
+    padding: 45px 60px 0;
 }
 
 .input-group {
-    height: 66px;
+    min-height: 65px;
 
     border-bottom: 1px solid #ddd;
 
     display: flex;
     align-items: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+
+    transition: border-color 0.25s;
+}
+
+.input-group:focus-within {
+    border-color: #29977a;
 }
 
 .input-group i {
-    width: 40px;
+    width: 42px;
 
-    color: #222;
-    font-size: 15px;
+    color: #29977a;
+    font-size: 16px;
     text-align: left;
 }
 
 .input-group input {
     flex: 1;
+    min-width: 0;
 
-    height: 100%;
+    height: 60px;
 
     border: none;
     outline: none;
 
-    font-size: 18px;
-    color: #555;
+    font-size: 17px;
+    color: #333;
 
     background: transparent;
 }
 
 .input-group input::placeholder {
-    color: #777;
+    color: #999;
     opacity: 1;
 }
 
-/* =========================
+/* ========================================
    OPÇÕES
-========================= */
+======================================== */
 
 .form-options {
     margin-top: 25px;
@@ -164,113 +199,99 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .remember {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
 
     cursor: pointer;
 }
 
 .remember input {
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
 
-    appearance: none;
-
-    border: 1px solid #aaa;
-    background: #fff;
+    accent-color: #29977a;
 
     cursor: pointer;
 }
 
-.remember input:checked {
-    background: #43a047;
-    border-color: #43a047;
-
-    position: relative;
-}
-
-.remember input:checked::after {
-    content: "✓";
-
-    position: absolute;
-
-    color: white;
-    font-size: 14px;
-
-    left: 3px;
-    top: 0;
-}
-
 .form-options a {
-    color: #444;
+    color: #29977a;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .form-options a:hover {
+    color: #17654f;
     text-decoration: underline;
 }
 
-/* =========================
+/* ========================================
    BOTÃO ENTRAR
-========================= */
+======================================== */
 
 .btn-enter {
     display: block;
 
-    margin: 34px auto 0;
+    margin: 35px auto 0;
 
-    width: 142px;
-    height: 63px;
+    width: 155px;
+    min-height: 55px;
 
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
 
-    background: #43a047;
+    background: #29977a;
     color: white;
 
-    font-size: 21px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: bold;
 
     cursor: pointer;
 
-    transition:
-        background 0.2s,
-        transform 0.1s;
+    transition: 0.25s;
 }
 
 .btn-enter:hover {
-    background: #388e3c;
+    background: #176d55;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(41, 151, 122, 0.2);
 }
 
 .btn-enter:active {
     transform: scale(0.98);
 }
 
+/* ========================================
+   BOTÃO CERTIFICADO
+======================================== */
 
 .certificate-btn {
     width: calc(100% - 120px);
-    height: 54px;
+    min-height: 55px;
 
-    margin: 60px 60px 0;
+    margin: 50px 60px 0;
 
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
 
-    background: #43a047;
-    color: white;
+    background: #eaf5ef;
+    color: #218669;
 
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
 
     cursor: pointer;
 
-    transition: background 0.2s;
+    transition: 0.25s;
 
     display: flex;
     justify-content: center;
@@ -279,27 +300,31 @@ body {
 }
 
 .certificate-btn:hover {
-    background: #388e3c;
+    background: #29977a;
+    color: white;
 }
 
 .certificate-btn i {
-    font-size: 12px;
+    font-size: 14px;
 }
 
+/* ========================================
+   CADASTRO
+======================================== */
 
 .register {
     text-align: center;
 
-    padding: 48px 20px 38px;
+    padding: 40px 20px 35px;
 
-    font-size: 17px;
+    font-size: 15px;
     color: #777;
 }
 
 .register a {
-    color: #429b47;
+    color: #29977a;
 
-    font-weight: 600;
+    font-weight: bold;
 
     text-decoration: none;
 }
@@ -308,64 +333,181 @@ body {
     text-decoration: underline;
 }
 
+/* ========================================
+   FOCO E ACESSIBILIDADE
+======================================== */
 
-@media (max-width: 700px) {
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #29977a;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 35px 20px;
+    }
+
+    .container {
+        max-width: 650px;
+    }
+
+    .login-form {
+        padding: 40px 40px 0;
+    }
+
+    .certificate-btn {
+        width: calc(100% - 80px);
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+}
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 550px) {
 
     body {
         align-items: flex-start;
-        padding-top: 40px;
+        padding: 35px 12px;
+    }
+
+    .logo-area {
+        margin-bottom: 25px;
     }
 
     .logo-area h1 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .logo-area p {
-        font-size: 12px;
-        letter-spacing: 1.5px;
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
     .login-card {
-        max-width: calc(100% - 20px);
+        max-width: 100%;
+        border-radius: 8px;
     }
 
     .tabs,
     .tab {
-        height: 70px;
+        min-height: 65px;
     }
 
     .tab {
-        font-size: 17px;
+        font-size: 16px;
+        gap: 7px;
+    }
+
+    .tab i {
+        font-size: 14px;
     }
 
     .login-form {
-        padding: 35px 25px 0;
+        padding: 30px 23px 0;
     }
 
-    .certificate-btn {
-        width: calc(100% - 50px);
-        margin-left: 25px;
-        margin-right: 25px;
+    .input-group {
+        min-height: 58px;
+        margin-bottom: 13px;
+    }
+
+    .input-group input {
+        height: 55px;
+        font-size: 15px;
+    }
+
+    .input-group i {
+        width: 35px;
+        font-size: 14px;
     }
 
     .form-options {
-        font-size: 13px;
+        font-size: 12px;
+        gap: 12px;
     }
-}
 
-@media (max-width: 450px) {
-
-    .form-options {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .remember input {
+        width: 17px;
+        height: 17px;
     }
 
     .btn-enter {
+        width: 140px;
+        min-height: 50px;
+        font-size: 16px;
         margin-top: 30px;
     }
 
     .certificate-btn {
-        font-size: 15px;
+        width: calc(100% - 46px);
+        min-height: 50px;
+
+        margin: 35px 23px 0;
+
+        font-size: 14px;
     }
+
+    .register {
+        padding: 32px 15px;
+        font-size: 13px;
+    }
+
+}
+
+/* ========================================
+   CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 25px 8px;
+    }
+
+    .logo-area h1 {
+        font-size: 32px;
+    }
+
+    .tab {
+        font-size: 14px;
+    }
+
+    .login-form {
+        padding: 25px 16px 0;
+    }
+
+    .form-options {
+        flex-wrap: wrap;
+    }
+
+    .certificate-btn {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 13px;
+    }
+
+}
+
+/* ========================================
+   TELAS COM POUCA ALTURA
+======================================== */
+
+@media (max-height: 650px) {
+
+    body {
+        align-items: flex-start;
+    }
+
 }
